@@ -40,12 +40,12 @@
         End Try
 
         Dim command2 As String
-        command2 = "SELECT `discount_id`, `discount_value`, `discount_part_name` FROM `discount`"
+        command2 = "SELECT parts_products.name, applies.amount, applies.discount_id FROM applies JOIN parts_products ON applies.parts_product_id = parts_products.id;"
         Try
             readqueary(command2)
             With cmdread
                 While .Read
-                    cbo_partDiscount.Items.Add(.GetValue(2))
+                    cbo_partDiscount.Items.Add(.GetValue(0) + ":" + .GetValue(1).ToString() + ":% Off" + ":" + .GetValue(2).ToString)
                 End While
             End With
         Catch ex As Exception
@@ -101,13 +101,15 @@
     End Sub
 
     Private Sub cbo_partDiscount_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_partDiscount.SelectedIndexChanged
+        MsgBox(cbo_partDiscount.SelectedItem.ToString.Split(":")(3))
         Dim command As String
-        command = "SELECT `discount_id`, `discount_value`, `discount_part_name` FROM `discount` WHERE discount_part_name = '" & cbo_partDiscount.SelectedItem & "'"
+        command = "SELECT `discount_id`, `discount_value`, `discount_part_name` FROM `discount` WHERE discount_id = '" & Integer.Parse(cbo_partDiscount.SelectedItem.ToString.Split(":")(3)) & "'"
         Try
             readqueary(command)
             With cmdread
                 While .Read
                     txtBox_discValue.Text = .GetValue(1)
+                    MsgBox(.GetValue(1))
                 End While
             End With
         Catch ex As Exception
@@ -190,4 +192,11 @@
         txtBox_totalFee.Text = originalFee
     End Sub
 
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+
+    End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
+    End Sub
 End Class

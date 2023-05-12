@@ -81,22 +81,23 @@
 
 
     Private Sub ListBoxEmployee_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBoxEmployee.SelectedIndexChanged
-        txtBox_fname.Enabled = True
-        txtBox_midName.Enabled = True
-        txtBox_lname.Enabled = True
-        txtBox_addr.Enabled = True
-        dtpBirthdate.Enabled = True
-        txtBox_employeeID.Enabled = True
-        cb_EmployeeSkill.Enabled = True
-        dtpStartDate.Enabled = True
-        btn_Add.Enabled = True
-        btn_Update.Enabled = True
-        btn_Delete.Enabled = True
-        btn_generateEmpId.Enabled = True
+
 
         Dim command As String
         If ListBoxEmployee.SelectedItems.Count > 0 Then
             command = "SELECT `emp_id`, `emp_skill`, `emp_fname`, `emp_midname`, `emp_lname`, `emp_birthdate`, `emp_addr`, `emp_startDate` FROM `employees` WHERE emp_fname ='" & ListBoxEmployee.SelectedItem.ToString.Split(" ")(0) & "'"
+            txtBox_fname.Enabled = True
+            txtBox_midName.Enabled = True
+            txtBox_lname.Enabled = True
+            txtBox_addr.Enabled = True
+            dtpBirthdate.Enabled = True
+            txtBox_employeeID.Enabled = True
+            cb_EmployeeSkill.Enabled = True
+            dtpStartDate.Enabled = True
+            btn_Add.Enabled = True
+            btn_Update.Enabled = True
+            btn_Delete.Enabled = True
+            btn_generateEmpId.Enabled = True
             Try
                 readqueary(command)
                 With cmdread
@@ -118,6 +119,7 @@
     End Sub
 
     Private Sub btn_ClearFields_Click(sender As Object, e As EventArgs) Handles btn_ClearFields.Click
+        txtBox_fname.Clear()
         txtBox_midName.Clear()
         txtBox_lname.Clear()
         txtBox_addr.Clear()
