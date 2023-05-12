@@ -41,20 +41,22 @@
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listBoxCustomer.SelectedIndexChanged
-        txtBox__customerId.Enabled = True
-        txtBox_MidName.Enabled = True
-        txtBox_lname.Enabled = True
-        txtBox_customer_addr.Enabled = True
-        txtBox_vehicle_id.Enabled = True
-        dtp_inquireDate.Enabled = True
-        btn_generateID.Enabled = True
-        btn_generateVeID.Enabled = True
-        btn_Update.Enabled = True
-        btn_Delete.Enabled = True
+
 
         Dim command As String
         If listBoxCustomer.SelectedItems.Count > 0 Then
             command = "SELECT `customer_id`, `customer_first_name`, `customer_mid_name`, `customer_last_name`, `customer_addr`, `customer_vehicle_id`, `customer_inquireDate` FROM `customer` WHERE customer_first_name ='" & listBoxCustomer.SelectedItem.ToString.Split(" ")(0) & "'"
+            txtBox__customerId.Enabled = True
+            txtBox_MidName.Enabled = True
+            txtBox_lname.Enabled = True
+            txtBox_customer_addr.Enabled = True
+            txtBox_vehicle_id.Enabled = True
+            dtp_inquireDate.Enabled = True
+            btn_generateID.Enabled = True
+            btn_generateVeID.Enabled = True
+            btn_Update.Enabled = True
+            btn_Delete.Enabled = True
+
             Try
                 readqueary(command)
                 With cmdread

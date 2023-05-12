@@ -140,7 +140,7 @@ Public Class MDIParent1
         disableHeader()
     End Sub
 
-    Private Sub DiscountsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DiscountsToolStripMenuItem.Click
+    Public Sub DiscountsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DiscountsToolStripMenuItem.Click
         AvailForm.Hide()
         CustomerForm.Hide()
         PartsProductForm.Hide()
@@ -328,4 +328,6 @@ Public Class MDIParent1
 
         disableHeader()
     End Sub
+
+
 End Class

@@ -326,7 +326,7 @@ Partial Class Avails
         'btn_discRemove
         '
         Me.btn_discRemove.ForeColor = System.Drawing.Color.DarkRed
-        Me.btn_discRemove.Location = New System.Drawing.Point(462, 235)
+        Me.btn_discRemove.Location = New System.Drawing.Point(462, 229)
         Me.btn_discRemove.Name = "btn_discRemove"
         Me.btn_discRemove.Size = New System.Drawing.Size(43, 33)
         Me.btn_discRemove.TabIndex = 48
@@ -374,7 +374,7 @@ Partial Class Avails
         'cbo_partDiscount
         '
         Me.cbo_partDiscount.FormattingEnabled = True
-        Me.cbo_partDiscount.Location = New System.Drawing.Point(226, 235)
+        Me.cbo_partDiscount.Location = New System.Drawing.Point(226, 229)
         Me.cbo_partDiscount.Name = "cbo_partDiscount"
         Me.cbo_partDiscount.Size = New System.Drawing.Size(229, 33)
         Me.cbo_partDiscount.TabIndex = 47
@@ -392,7 +392,7 @@ Partial Class Avails
         '
         Me.txtBox_discValue.BackColor = System.Drawing.Color.PaleGreen
         Me.txtBox_discValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBox_discValue.Location = New System.Drawing.Point(226, 275)
+        Me.txtBox_discValue.Location = New System.Drawing.Point(226, 269)
         Me.txtBox_discValue.Name = "txtBox_discValue"
         Me.txtBox_discValue.Size = New System.Drawing.Size(279, 24)
         Me.txtBox_discValue.TabIndex = 43
@@ -401,7 +401,7 @@ Partial Class Avails
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(67, 281)
+        Me.Label10.Location = New System.Drawing.Point(67, 275)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(134, 18)
         Me.Label10.TabIndex = 42
@@ -411,7 +411,7 @@ Partial Class Avails
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(67, 243)
+        Me.Label9.Location = New System.Drawing.Point(67, 237)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(154, 18)
         Me.Label9.TabIndex = 40
